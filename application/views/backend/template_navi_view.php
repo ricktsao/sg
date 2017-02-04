@@ -46,10 +46,18 @@ if ( $admin_auth !== false) {
 					</ul>
 					
 				</li>
-			<?php  } else if(in_array($module_item["id"], $admin_auth)){ ?>
+			<?php  
+				} else if(in_array($module_item["id"], $admin_auth)){ 
+				
+				$url = $module_item["url"];
+				if($module_item["id"] == 'guards' || $module_item["id"] == 'mgr')
+				{
+					$url = 'javascript:void(0)';
+				}
+			?>
 				
 				<li <?php echo  $module_id== $module_item["id"]?'class="active"':''  ?>>
-					<a href="<?php echo $module_item["url"]?>">
+					<a href="<?php echo $url?>">
 						
 						<span class="menu-text"> <?php echo $c.".".$module_item["title"]?> </span>
 					</a>
