@@ -193,7 +193,7 @@ abstract class Backend_Controller extends IT_Controller
 			{
 				$this->navi_path .=
 				'<li>
-					<i class="icon-home home-icon"></i>
+					<i class="fa fa-home" aria-hidden="true"></i>
 					<a href="'.backendUrl().'">'.$key.'</a>
 				</li>';
 
@@ -213,7 +213,7 @@ abstract class Backend_Controller extends IT_Controller
 
 		}
 
-		$this->navi_path = '<ul class="breadcrumb">'.$this->navi_path.'</ul>';
+		$this->navi_path = '<ul class="list-unstyle">'.$this->navi_path.'</ul>';
 
 
 	}

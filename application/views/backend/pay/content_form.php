@@ -5,43 +5,31 @@
     <table class="page-form-table">
         <tbody>
             <tr>
-                <td class="title-col">姓名</td>
+                <td class="title-col">承辦人</td>
                 <td>
                     <div>
-                        <input type="text" placeholder="姓名">
+                        范先生
                     </div>
                 </td>
             </tr>
             <tr>
-                <td class="title-col">電話</td>
+                <td class="title-col">待收費用名稱</td>
                 <td>
                     <div>
-                        <input type="text" placeholder="電話">
+                        <input type="text" placeholder="待收費用名稱">
                     </div>
                 </td>
             </tr>
             <tr>
-                <td class="title-col">住址</td>
+                <td class="title-col">金額</td>
                 <td>
                     <div>
-                        <input type="text" placeholder="住址">
+                        <input type="text" placeholder="金額">
                     </div>
                 </td>
             </tr>
             <tr>
-                <td class="title-col">所屬社區</td>
-                <td>
-                    <div>
-                        <select>
-                            <option>社區A</option>
-                            <option>社區B</option>
-                            <option>社區C</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="align-center">人員備註</td>
+                <td colspan="2" class="align-center">事由敘述</td>
             </tr>
             <tr>
                 <td colspan="2">

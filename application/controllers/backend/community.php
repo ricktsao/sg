@@ -16,6 +16,15 @@ class Community extends Backend_Controller {
 		
 		$this->display("content_view",$data);
 	}
+
+	public function editContent()
+	{				
+		
+		$data = array();		
+		
+		$this->display("content_form_view",$data);
+	}
+	
 	
 	
 	

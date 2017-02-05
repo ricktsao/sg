@@ -98,6 +98,7 @@ class Login extends CI_Controller {
 				
 				$user_info = $this->auth_model->runSql( $query );
 
+
 				
 				if($user_info["count"] > 0)
 				{
@@ -125,6 +126,8 @@ class Login extends CI_Controller {
 						{
 							array_push($sys_admin_auth,$item["id"]);	
 						}
+
+						
 						//************************************************************************************************
 						
 						

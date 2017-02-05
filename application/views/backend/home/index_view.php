@@ -21,9 +21,21 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){
    $myip= $_SERVER['REMOTE_ADDR'];
 }
 echo $myip;
+
+
 ?>
 <br/><br/>
 
 Login Time:<?php echo $this->session->userdata('admin_login_time');?>
+
+</div>
+<hr>
+<div>
+	<h2>頁面example</h2>
+	<ul>
+		<li><a href="<?php echo backendUrl('example')?>">列表頁範例</a></li>
+		<li><a href="<?php echo backendUrl('example','form')?>">表單頁範例</a></li>
+	</ul>
+
 
 </div>
