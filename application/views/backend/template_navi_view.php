@@ -14,12 +14,12 @@ if ( $admin_auth !== false) {
 					&& in_array($module_item["id"], $admin_auth)
 					&&  $module_item["dir"]==1) {						?>		
 				
-				<li <?php echo  $module_sn == $module_item["sn"]?'class="open"':''  ?>>	
-					<a href="#" >
-						<span> <?php echo $module_item["title"]; ?>  </span>	
+				<li class="hasChild <?php echo  $module_sn == $module_item["sn"]?'open':''?>">	
+					<a href="javascript:void(0)">
+						 <?php echo $module_item["title"]; ?>	
 					</a>
 					
-					<ul class="submenu" <?php echo  $module_parent_sn == $module_item["sn"]?'style="display: block;"':''  ?>>
+					<ul class="submenu list-unstyle" <?php echo  $module_parent_sn == $module_item["sn"]?'style="display: block;"':'style="display: none;"'  ?>>
 						
 					
 					<?php						
@@ -54,7 +54,7 @@ if ( $admin_auth !== false) {
 				<li <?php echo  $module_id== $module_item["id"]?'class="active"':''  ?>>
 					<a href="<?php echo $url?>">
 						
-						<span class="menu-text"> <?php echo $module_item["title"]?> </span>
+						 <?php echo $module_item["title"]?>
 					</a>
 				</li>
 			

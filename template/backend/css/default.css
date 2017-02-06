@@ -130,6 +130,7 @@ table {
 #nav-list a {
     display: block;
     color: #FFF;
+    position: relative;
 }
 
 #nav-list > li > a {
@@ -138,10 +139,38 @@ table {
     padding: 10px 0 10px 15px;
 }
 
-#nav-list > li > a:hover {
+#nav-list > li > a:hover,
+#nav-list > li.active > a  {
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
     border-right: 4px solid orange;
+}
+
+#nav-list >li.hasChild > a::after {
+    content: "\f138";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 200px;
+    top: 12px;
+    transition: transform 0.2s;
+}
+
+#nav-list > li.open.hasChild > a::after {
+    content: "\f138";
+    transform: rotate(90deg);
+   
+}
+
+#nav-list .submenu > li > a {
+    display: block;
+    padding: 10px 0 10px 35px;
+     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#nav-list .submenu > li.active > a,
+#nav-list .submenu > li:hover > a{
+    background: #3f3f3f;
+    color:orange;
 }
 
 #breadcrumbs {
@@ -288,15 +317,15 @@ input:checked + .slider:before {
     display: inline-block;
     position: relative;
     cursor: pointer;
-  vertical-align: middle;
-  padding-left: 22px;
-  height: 18px;
+    vertical-align: middle;
+    padding-left: 22px;
+    height: 18px;
 }
 
 .checkbox::before {
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     content: "";
     width: 18px;
     height: 18px;
@@ -341,7 +370,7 @@ input:checked + .slider:before {
 }
 
 .page-form-table .title-col::after {
-    content: " 	:"
+    content: "  :"
 }
 
 .page-form-table>tbody > tr:nth-child(even) > td {
