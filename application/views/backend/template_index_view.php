@@ -8,31 +8,21 @@
 		<link rel="stylesheet" href="<?php echo site_url().$templateUrl?>css/default.css">
 		<!-- basic styles -->	
 		<link href="<?php echo site_url().$templateUrl?>css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />	
-
+		<link rel="stylesheet" href="<?php echo site_url().$templateUrl?>lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+		
+		<link rel="stylesheet" href="<?php echo site_url().$templateUrl?>lib/elFinder-2.1.21/css/elfinder.min.css">	
+	
 		<script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 
-		<!--elfinder-->
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo site_url()."/".$templateUrl?>js/elfinder/css/elfinder.min.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo site_url()."/".$templateUrl?>js/elfinder/css/theme.css">
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>js/elfinder/elfinder.min.js"></script>
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>/elfinder/js/i18n/elfinder.zh_TW.js"></script>
 		
-		<!--tiny mce-->
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>js/tinymce/tinymce.min.js"></script>
-		
-		
-		<!-- fancybox -->
-		<link rel="stylesheet" href="<?php echo site_url()."/".$templateUrl?>js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-		
-		<!-- custom scripts -->
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>js/form.js"></script>
-		<script type="text/javascript" src="<?php echo site_url()."/".$templateUrl?>js/datePicker/WdatePicker.js"></script>		
-		
-		
+		<script src="<?php echo site_url().$templateUrl?>lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>		
+		<script src="<?php echo site_url().$templateUrl?>lib/tinymce/tinymce.min.js"></script>		
+		<script src="<?php echo site_url().$templateUrl?>lib/elFinder-2.1.21/js/elfinder.min.js"></script>
+		<script src="<?php echo site_url().$templateUrl?>lib/elFinder-2.1.21/js/i18n/elfinder.zh_TW.js"></script>
+		<script src="<?php echo site_url().$templateUrl?>lib/default.js"></script>
 
 		<!-- 本頁使用-->
 		<?php echo $style_css;?>
@@ -99,29 +89,7 @@
 	<script>
 		
 
-		$('#nav-userInfo').click(function(){
-			var target= $('#nav-dropdown');
-			if(target.is(":hidden")){
-				target.show();
-			}else{
-				target.hide();
-			}
-		})
-
-
-		$('#nav-list > li.hasChild').click(function(){
-			var target = $(this).children('ul');
-			if(target.is(":hidden")){
-				target.show();
-				$(this).addClass('open');
-			}else{
-				target.hide();
-				$(this).removeClass('open');
-			}
-		})
-
-		$($('.submenu > .active').parents()[1]).addClass('open').addClass('active');
-
+	
 
 	</script>
 </body>

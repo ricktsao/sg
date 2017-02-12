@@ -205,3 +205,5 @@ $config['suggestion_to_role'] = array(
 	"a" => "管委收",
 	"s" => "總幹事收"
 );
+
+
